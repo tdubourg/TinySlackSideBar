@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Tiny Slack Side Bar",
+  "description": "Make the new Slack side bar tiny",
+  "version": "0.1.0",
+  "homepage_url": "https://github.com/tdubourg/TinySlackSideBar",
+  "author": "Theo Dubourg",
+  "content_scripts": [{
+    "matches": ["https://*.slack.com/client/*"],
+    "js": [
+      "src/app.js"
+    ],
+    "run_at": "document_end"
+  }],
+  "background": {
+    "service_worker": "src/background.js"
+  }
+}
